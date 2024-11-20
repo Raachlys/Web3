@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мотоцикли</title>
+    <script>
+        function showSection(id) {
+            // Ховаємо всі розділи
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            // Показуємо вибраний розділ
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Світ Мотоциклів</h1>
+    </header>
+    <nav>
+        <button onclick="showSection('moto')">Мотоцикли</button>
+        <button onclick="showSection('specs')">Характеристики</button>
+        <button onclick="showSection('prices')">Ціни</button>
+    </nav>
+    <section id="moto" style="display: block;">
+        <h2>Популярні Мотоцикли</h2>
+        <ul>
+            <li>Harley-Davidson</li>
+            <li>Kawasaki Ninja</li>
+            <li>Yamaha R1</li>
+            <li>Honda CBR</li>
+            <li>BMW S1000RR</li>
+        </ul>
+    </section>
+    <section id="specs" style="display: none;">
+        <h2>Характеристики Мотоциклів</h2>
+        <table border="1" cellpadding="10">
+            <tr>
+                <th>Модель</th>
+                <th>Двигун</th>
+                <th>Потужність</th>
+                <th>Максимальна швидкість</th>
+            </tr>
+            <tr>
+                <td>Harley-Davidson</td>
+                <td>1,868 см³</td>
+                <td>94 к.с.</td>
+                <td>180 км/год</td>
+            </tr>
+            <tr>
+                <td>Kawasaki Ninja</td>
+                <td>998 см³</td>
+                <td>203 к.с.</td>
+                <td>299 км/год</td>
+            </tr>
+            <tr>
+                <td>Yamaha R1</td>
+                <td>998 см³</td>
+                <td>200 к.с.</td>
+                <td>299 км/год</td>
+            </tr>
+            <tr>
+                <td>Honda CBR</td>
+                <td>999 см³</td>
+                <td>215 к.с.</td>
+                <td>299 км/год</td>
+            </tr>
+        </table>
+    </section>
+    <section id="prices" style="display: none;">
+        <h2>Ціни на Мотоцикли</h2>
+        <ul>
+            <li>Harley-Davidson: $25,000</li>
+            <li>Kawasaki Ninja: $20,000</li>
+            <li>Yamaha R1: $17,000</li>
+            <li>Honda CBR: $18,500</li>
+            <li>BMW S1000RR: $21,000</li>
+        </ul>
+    </section>
+</body>
+</html>
+
